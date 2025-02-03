@@ -2,8 +2,9 @@ import './Header.scss'
 import Logo from '@/components/Logo'
 import classNames from 'classnames'
 import Button from '@/components/Button'
-import { ReactComponent as SVGSearch } from '@/assets/icons/search.svg'
-import { ReactComponent as SVGNotification } from '@/assets/icons/notification.svg'
+import {ReactComponent as SVGSearch} from '@/assets/icons/search.svg'
+import {ReactComponent as SVGNotification} from '@/assets/icons/notification.svg'
+import BurgerButton from "@/components/BurgerButton";
 
 const Header = (props) => {
     const {
@@ -36,40 +37,45 @@ const Header = (props) => {
                     className="header__logo"
                     loading="eager"
                 />
-                <nav className="header__menu">
-                    <ul className="header__menu-list">
-                        {menuItems.map(({ label, href }, index) => (
-                            <li className="header__menu-item" key={index}>
-                                <a
-                                    className={classNames('header__menu-link', {
-                                        'is-active': href === url
-                                    })}
-                                    href={href}
-                                >
-                                    {label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-                <div className="header__actions">
-                    <Button
-                        className="header__button"
-                        label="Search"
-                        isLabelHidden
-                        mode="transparent"
-                        iconName="search"
-                        IconFallbackSVG={SVGSearch}
-                    />
-                    <Button
-                        className="header__button"
-                        label="Notifications"
-                        isLabelHidden
-                        mode="transparent"
-                        iconName="notification"
-                        IconFallbackSVG={SVGNotification}
-                    />
-                </div>
+                <dialog className="header__overlay-menu-dialog">
+                    <nav className="header__menu">
+                        <ul className="header__menu-list">
+                            {menuItems.map(({label, href}, index) => (
+                                <li className="header__menu-item" key={index}>
+                                    <a
+                                        className={classNames('header__menu-link', {
+                                            'is-active': href === url
+                                        })}
+                                        href={href}
+                                    >
+                                        {label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+                    <div className="header__actions">
+                        <Button
+                            className="header__button"
+                            label="Search"
+                            isLabelHidden
+                            mode="transparent"
+                            iconName="search"
+                            IconFallbackSVG={SVGSearch}
+                        />
+                        <Button
+                            className="header__button"
+                            label="Notifications"
+                            isLabelHidden
+                            mode="transparent"
+                            iconName="notification"
+                            IconFallbackSVG={SVGNotification}
+                        />
+                    </div>
+                </dialog>
+                <BurgerButton
+                    className="header__burger-button visible-tablet"
+                />
             </div>
         </header>
     )
