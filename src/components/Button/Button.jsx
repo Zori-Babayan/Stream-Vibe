@@ -8,14 +8,14 @@ const Button = (props) => {
         type = 'button',
         href,
         target,
-        /**
-         * '' (default) | 'transparent'
+        /** mode
+         * '' (default) | 'transparent' | 'black-10'
          */
         mode = '',
         label,
         isLabelHidden = false,
         iconName,
-        /**
+        /** iconPosition
          * 'before' | 'after'
          */
         iconPosition = 'before',
