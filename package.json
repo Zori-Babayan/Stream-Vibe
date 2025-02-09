@@ -7,7 +7,8 @@
     "build": "minista build",
     "preview": "minista preview",
     "component": "generate-react component",
-    "sections": "generate-react component --type=sections"
+    "sections": "generate-react component --type=sections",
+    "layouts": "generate-react component --type=layouts"
   },
   "prettier": {
     "semi": false

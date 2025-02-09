@@ -32,9 +32,10 @@
     flex-grow: 1;
     padding-top: fluid(195, 150);
     padding-bottom: fluid(131, 50);
-    background: var(--heroGradientTop),
-    var(--heroGradientBottom),
-    url("../../assets/images/hero/bg.png") 50%/cover;
+    background:
+        var(--heroGradientTop),
+        var(--heroGradientBottom),
+        url("../../assets/images/hero/bg.png") 50%/cover;
     background-repeat: no-repeat;
 
   }
