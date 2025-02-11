@@ -1,8 +1,7 @@
 import './Hero.scss';
 import Button from "@/components/Button";
-import {ReactComponent as SVGPlay} from "@/assets/icons/play.svg";
 
-const Hero = (props) => {
+const Hero = () => {
     const titleId = 'hero-title'
     const playButtonTitle = 'Play Video';
     return (
@@ -39,7 +38,6 @@ const Hero = (props) => {
                     <Button
                         className="hero__button"
                         iconName='play'
-                        IconFallbackSVG={SVGPlay}
                         hasFillIcon
                         label='Start Watching Now'
                     />

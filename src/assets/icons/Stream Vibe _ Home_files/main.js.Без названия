@@ -1,0 +1,5 @@
+import OverlayMenu from "/src/modules/OverlayMenu.js";
+import SliderCollection from "/src/modules/SliderCollection.js?t=1739127720791";
+
+new OverlayMenu()
+new SliderCollection()

@@ -20,7 +20,7 @@ const Button = (props) => {
          */
         iconPosition = 'before',
         hasFillIcon,
-        IconFallbackSVG,
+        extraAttrs,
     } = props
 
     const isLink = href !== undefined
@@ -34,7 +34,6 @@ const Button = (props) => {
             className="button__icon"
             name={iconName}
             hasFill={hasFillIcon}
-            FallbackSVG={IconFallbackSVG}
         />
     )
 
@@ -46,6 +45,7 @@ const Button = (props) => {
             title={title}
             aria-label={title}
             {...specificProps}
+            {...extraAttrs}
         >
             {iconPosition === 'before' && iconComponent}
             {!isLabelHidden && (
