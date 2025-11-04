@@ -17,7 +17,6 @@ export default function () {
             <Devices />
             <Questions />
             <Plans />
-
         </>
     )
 }
