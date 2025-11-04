@@ -5,7 +5,7 @@ const Footer = () => {
     const menuItems = [
         {
             title: 'Home',
-            links: ['Categories', 'Devices', 'Pricing', 'FAQ'],
+            links: ['Categories', 'Plans', 'Pricing', 'FAQ'],
         },
         {
             title: 'Movies',
